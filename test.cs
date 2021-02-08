@@ -121,17 +121,7 @@ namespace testmedformsapp
         }
     
 
-       
-
-
-        private void timer2_Tick(object sender, EventArgs e)
-        {
-         
-            
-            
-            
-         
-        }
+      
 
         private void button3_Click(object sender, EventArgs e)
         {
@@ -144,13 +134,13 @@ namespace testmedformsapp
                     
                     while (!this.threadInterrupt.WaitOne(0))
                     {
-                        int n = 250;
+                        int n = 8;
                         int i = n * -1;
                         while (i <= n)
                         {
                             var val = n - Math.Abs(i++) + 1;
-                            //  Console.WriteLine(val);
-                            OutputAnalogChannel(1, i);
+                         
+                          
                             SetDigitalChannel(i);
                             ClearAllDigital();
                             Thread.Sleep(100);
